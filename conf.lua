@@ -1,4 +1,7 @@
 function love.conf(t)
+  --create the variable space
+  Cave = {}
+
   --all files list here (try keep them in order)
   require 'init'
   require 'flood'
