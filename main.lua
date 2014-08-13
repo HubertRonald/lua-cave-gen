@@ -19,11 +19,16 @@ function love.load()
     Cave.map[t][#Cave.map[1]] = 1
   end
 
+  --testing flood
+  floodfill()
+
   --just prints an ascii representation of finished map to terminal
   for a=1,Cave.mapheight do
     for b=1,Cave.mapwidth do
       if Cave.map[a][b]==1 then
         io.write("X")
+      elseif Cave.map[a][b]==2 then
+        io.write("0")
       else
         io.write(" ")
       end
@@ -31,5 +36,3 @@ function love.load()
     print()
   end
 end
-
-

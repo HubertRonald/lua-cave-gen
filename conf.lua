@@ -1,4 +1,5 @@
 function love.conf(t)
+  math.randomseed( os.time() )
   --create the variable space
   Cave = {}
 
