@@ -20,7 +20,9 @@ function love.load()
   end
 
   --testing flood
-  floodfill()
+  while floodfill() == false do
+    connect()
+  end
 
   --just prints an ascii representation of finished map to terminal
   for a=1,Cave.mapheight do

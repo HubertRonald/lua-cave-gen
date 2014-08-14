@@ -27,8 +27,7 @@ function floodfill()
   end
 
   if foundFirstSquare == false then
-    io.write("That was a terrible generation.\n")
-    os.exit()
+    return true
   end
 
   --our target 'colour' is a 0
@@ -41,7 +40,7 @@ function floodfill()
   local w
   --this keeps a track of the east most node from the current node that is still the target 'colour'
   local e
-
+  connectedList = {}
 
   --YES MOTHERFUCKER
   table.insert( queue , node )
@@ -60,6 +59,7 @@ function floodfill()
         end
         for m = w[1],e[1] do
           Cave.map[w[2]][m] = 2
+          table.insert(connectedList, {m, w[2]})
           if w[2]-1 > 0 and Cave.map[w[2]-1][m] == 0 then
             table.insert( queue, {m, w[2]-1} )
             added = added + 1
@@ -75,4 +75,63 @@ function floodfill()
       table.remove( queue, 1 )
     end
   end
+  return false
+end
+  --next step, check for unconnected chambers
+function connect() 
+  local unconnected = false
+  local unconnectedList = {}
+  
+  for a=1,Cave.mapheight do
+    for b=1,Cave.mapwidth do
+      if Cave.map[a][b]==0 then
+        unconnected = true
+        local nodePoint = { b, a }
+        table.insert(unconnectedList, nodePoint)
+      end
+    end
+  end
+
+  --somehow need to find the shortest distance between the unconnected and connected sections in both node lists
+  local difflist = {}
+
+  for s = 1,#connectedList do
+    for t = 1,#unconnectedList do
+      local diff = math.sqrt((connectedList[s][1] - unconnectedList[t][1])^2 + (connectedList[s][2] - unconnectedList[t][2])^2)
+      table.insert(difflist, {diff, connectedList[s], unconnectedList[t]})
+    end
+  end
+
+  --sort the lists (write a godamn better sort)
+  table.sort(difflist, compare)
+  if difflist[1] == null then
+    return
+  end
+  local close1 = difflist[1][2]
+  local close2 = difflist[1][3]
+
+  if close1[1] <= close2[1] then
+    for u = close1[1],close2[1] do
+      Cave.map[close1[2]][u] = 0
+    end
+  else
+    for u = close2[1],close1[1] do
+      Cave.map[close1[2]][u] = 0
+    end
+  end
+
+  if close1[2] <= close2[2] then
+    for u = close1[2],close2[2] do
+      Cave.map[u][close1[1]] = 0
+    end
+  else
+    for u = close2[2],close1[2] do
+      Cave.map[u][close1[1]] = 0
+    end
+  end
+
+end
+
+function compare(a,b)
+    return a[1] < b[1]
 end
