@@ -48,17 +48,21 @@ function floodfill()
   while added > 0 do
     added = 0
     for i = 1,#queue do
-      if Cave.map[queue[i][2]][queue[i][1]] == 0 then
+      if Cave.map[queue[i][2]][queue[i][1]] == 0 or Cave.map[queue[i][2]][queue[i][1]] == 3 then
         w = queue[i]
         e = queue[i]
-        while w[1] - 1 > 0 and Cave.map[w[2]][w[1]-1] == 0 do
+        while w[1] - 1 > 0 and (Cave.map[w[2]][w[1]-1] == 0 or Cave.map[w[2]][w[1]-1] == 3) do
           w = { w[1]-1, w[2] }
         end
-        while e[1] + 1 <= #Cave.map[1] and Cave.map[e[2]][e[1]+1] == 0 do
+        while e[1] + 1 <= #Cave.map[1] and (Cave.map[e[2]][e[1]+1] == 0 or Cave.map[e[2]][e[1]+1] == 3) do
           e = { e[1]+1, e[2] }
         end
         for m = w[1],e[1] do
-          Cave.map[w[2]][m] = 2
+          if Cave.map[w[2]][m] == 0 then
+            Cave.map[w[2]][m] = 2
+          else 
+            Cave.map[w[2]][m] = 4
+          end
           table.insert(connectedList, {m, w[2]})
           if w[2]-1 > 0 and Cave.map[w[2]-1][m] == 0 then
             table.insert( queue, {m, w[2]-1} )
@@ -112,21 +116,21 @@ function connect()
 
   if close1[1] <= close2[1] then
     for u = close1[1],close2[1] do
-      Cave.map[close1[2]][u] = 0
+      Cave.map[close1[2]][u] = 3
     end
   else
     for u = close2[1],close1[1] do
-      Cave.map[close1[2]][u] = 0
+      Cave.map[close1[2]][u] = 3
     end
   end
 
   if close1[2] <= close2[2] then
     for u = close1[2],close2[2] do
-      Cave.map[u][close1[1]] = 0
+      Cave.map[u][close2[1]] = 3
     end
   else
     for u = close2[2],close1[2] do
-      Cave.map[u][close1[1]] = 0
+      Cave.map[u][close2[1]] = 3
     end
   end
 
