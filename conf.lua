@@ -1,5 +1,13 @@
 function love.conf(t)
   math.randomseed( os.time() )
+	--set up camera stuff
+	camera = {}
+	camera.x = 0
+	camera.y = 0
+	camera.scaleX = 1
+	camera.scaleY = 1
+	camera.rotation = 0
+
   --create the variable space
   Cave = {}
 
@@ -14,6 +22,8 @@ function love.conf(t)
   require 'init'
   require 'flood'
 	require 'draw'
+	require 'update'
+	require 'shadow'
 
 
   --default values

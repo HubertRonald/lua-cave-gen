@@ -14,10 +14,12 @@
    id="svg18320"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="tile-wall4.svg"
-   inkscape:export-filename="/home/rhiannon/caveexplorer/lua-cave-gen/tile-earth1.png"
+   sodipodi:docname="tile-earthfloor1.svg"
+   inkscape:export-filename="/home/rhiannon/caveexplorer/lua-cave-gen/assets/tile-earthfloor1.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
+  <defs
+     id="defs18322" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.3287811"
-     inkscape:cx="32.889365"
-     inkscape:cy="47.113043"
+     inkscape:zoom="5.1505741"
+     inkscape:cx="27.135165"
+     inkscape:cy="37.846411"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -35,15 +37,11 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="638"
+     inkscape:window-width="1278"
      inkscape:window-height="781"
      inkscape:window-x="0"
      inkscape:window-y="17"
-     inkscape:window-maximized="0"
-     showguides="true"
-     inkscape:guide-bbox="true" />
-  <defs
-     id="defs18322" />
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata18325">
     <rdf:RDF>
@@ -52,7 +50,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -62,24 +60,18 @@
      id="layer1"
      transform="translate(-133.88839,-206.47759)">
     <rect
-       style="opacity:0.98999999000000005;fill:#231128;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect2985-18-74-6"
-       width="80"
-       height="80"
-       x="-213.8884"
-       y="206.47758"
-       transform="scale(-1,1)" />
+       style="fill:#162825;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
+       id="rect5683"
+       width="81.54847"
+       height="17.298161"
+       x="-0.54914796"
+       y="62.702267"
+       transform="translate(133.88839,206.47759)" />
     <path
        sodipodi:nodetypes="ccczcccc"
        inkscape:connector-curvature="0"
        id="rect3007-5-6-8"
-       d="m 133.88839,206.47799 80,0 0,3 c 0,0 -12.07212,-1.49773 -19.82143,-1.28571 -7.74931,0.21201 -20.17857,-1.60715 -20.17857,-1.60715 l -20,0.89286 -20,2 z"
-       style="opacity:0.98999999000000005;fill:#321738;fill-opacity:1;fill-rule:nonzero;stroke:none" />
-    <path
-       sodipodi:nodetypes="ccczczcc"
-       inkscape:connector-curvature="0"
-       id="rect3007-7-9-1-5"
-       d="m 213.88826,206.47803 0,79.99998 -0.9998,0 c 0,0 -0.5021,-12.0721 -0.71416,-19.8214 -0.21196,-7.7493 1.60688,-20.1786 1.60688,-20.1786 0,0 -3.63731,-11.6765 -2.89232,-19.99998 0.74499,-8.3235 1.9996,-20 1.9996,-20 z"
-       style="opacity:0.98999999000000005;fill:#321739;fill-opacity:0.98823529;fill-rule:nonzero;stroke:none" />
+       d="m 238.60004,269.63 -106.90825,0 0,3 c 0,0 16.13262,-1.49773 26.48844,-1.28571 10.35581,0.21201 26.96569,-1.60715 26.96569,-1.60715 l 26.72706,0.89286 26.72706,2 z"
+       style="opacity:0.98999999000000005;fill:#43625d;fill-opacity:0.96078432;fill-rule:nonzero;stroke:none" />
   </g>
 </svg>

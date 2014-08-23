@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="80"
+   height="80.000427"
+   id="svg18320"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="tile-earthfloor3.svg"
+   inkscape:export-filename="/home/rhiannon/caveexplorer/lua-cave-gen/assets/tile-earthfloor2.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs18322" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.1505741"
+     inkscape:cx="27.135165"
+     inkscape:cy="37.846411"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1278"
+     inkscape:window-height="781"
+     inkscape:window-x="0"
+     inkscape:window-y="17"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata18325">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-133.88839,-206.47759)">
+    <rect
+       style="fill:#44635d;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:0.93333334"
+       id="rect5683"
+       width="81.54847"
+       height="17.298161"
+       x="-0.54914796"
+       y="62.702267"
+       transform="translate(133.88839,206.47759)" />
+    <path
+       sodipodi:nodetypes="ccczcccc"
+       inkscape:connector-curvature="0"
+       id="rect3007-5-6-8"
+       d="m 238.60004,269.63 -106.90825,0 0,3 c 0,0 16.13262,-1.49773 26.48844,-1.28571 10.35581,0.21201 26.96569,-1.60715 26.96569,-1.60715 l 26.72706,0.89286 26.72706,2 z"
+       style="opacity:0.98999999000000005;fill:#162825;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <path
+       style="fill:#162825;fill-opacity:1;fill-rule:nonzero;stroke:#72c0b4;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.96078431;stroke-dasharray:none"
+       d="m 13.008259,77.282284 -4.0772157,-6.018747 6.9895117,-3.688909 13.784872,2.52399 -5.436288,7.766125 1.941531,-6.407053 -9.707655,-2.718143 -5.824594,2.912296 z"
+       id="path6530"
+       inkscape:connector-curvature="0"
+       transform="translate(133.88839,206.47759)" />
+    <path
+       style="fill:#162825;fill-opacity:1;fill-rule:nonzero;stroke:#72c0b4;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.96078431;stroke-dasharray:none"
+       d="m 194.94955,273.76098 -4.07722,6.01875 6.98951,3.68891 13.78487,-2.52399 -5.43628,-7.76612 1.94153,6.40705 -9.70766,2.71814 -5.82459,-2.91229 z"
+       id="path6530-8"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
