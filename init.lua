@@ -7,9 +7,15 @@ function initialise(x,y)
     for b=1,x do
       --cell is a 1 (1=wall or "alive") 41/100 times
       if math.random(100) < chance then
-        table.insert(Cave.map[a],1)
+				local cell = {}
+				cell.tiletype = 1
+				cell.image = ''
+        table.insert(Cave.map[a],cell)
       else
-        table.insert(Cave.map[a],0)
+				local cell = {}
+				cell.tiletype = 0
+				cell.image = ''
+        table.insert(Cave.map[a],cell)
       end
     end
   end
@@ -28,21 +34,21 @@ function simstep()
       --gets the current amount of cells around it (including diagonals)
       local newval = countNeighbours(b,a)
       --if its a wall ("alive") then we need to see if it is lonely, and will "die"
-      if Cave.map[a][b]==1 then
+      if Cave.map[a][b].tiletype == 1 then
         --it "dies" if there are less than the death limit of "alive" cells around it
         if newval < death then
-          Cave.map[a][b] = 0
+          Cave.map[a][b].tiletype = 0
         else
           --otherwise it stays the same
-          Cave.map[a][b] = 1
+          Cave.map[a][b].tiletype = 1
         end
       else
         --if its a "dead" square, it can be "born" if it has enough "alive" squares around it, ie if the neighbours are higher than the birth limit
         if newval > birth then
-          Cave.map[a][b] = 1
+          Cave.map[a][b].tiletype = 1
         else
           --otherwise it stays "dead"
-          Cave.map[a][b] = 0
+          Cave.map[a][b].tiletype = 0
         end
       end
     end
@@ -67,7 +73,7 @@ function countNeighbours(x,y)
       elseif n_X<1 or n_Y<1 or n_X>#Cave.map[1] or n_Y>#Cave.map then
         count = count + 1
         --if its a wall, then its alive so add to our count
-      elseif Cave.map[n_Y][n_X]==1 then
+      elseif Cave.map[n_Y][n_X].tiletype == 1 then
         count = count + 1
       end
     end

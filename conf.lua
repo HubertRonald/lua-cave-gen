@@ -3,10 +3,17 @@ function love.conf(t)
   --create the variable space
   Cave = {}
 
+	--define constants
+	Cave.tileheight = 80
+	Cave.tilewidth = 80
+
+  Cave.mapheight=45
+  Cave.mapwidth=100
+
   --all files list here (try keep them in order)
   require 'init'
   require 'flood'
-
+	require 'draw'
 
 
   --default values

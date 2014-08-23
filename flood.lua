@@ -14,7 +14,7 @@ function floodfill()
   --find the first square
   for b = 1,#Cave.map do
     for a = 1,#Cave.map[1] do
-      if Cave.map[b][a] == 0 then
+      if Cave.map[b][a].tiletype == 0 then
         x = a
         y = b
         foundFirstSquare = true
@@ -48,27 +48,27 @@ function floodfill()
   while added > 0 do
     added = 0
     for i = 1,#queue do
-      if Cave.map[queue[i][2]][queue[i][1]] == 0 or Cave.map[queue[i][2]][queue[i][1]] == 3 then
+      if Cave.map[queue[i][2]][queue[i][1]].tiletype == 0 or Cave.map[queue[i][2]][queue[i][1]].tiletype == 3 then
         w = queue[i]
         e = queue[i]
-        while w[1] - 1 > 0 and (Cave.map[w[2]][w[1]-1] == 0 or Cave.map[w[2]][w[1]-1] == 3) do
+        while w[1] - 1 > 0 and (Cave.map[w[2]][w[1]-1].tiletype == 0 or Cave.map[w[2]][w[1]-1].tiletype == 3) do
           w = { w[1]-1, w[2] }
         end
-        while e[1] + 1 <= #Cave.map[1] and (Cave.map[e[2]][e[1]+1] == 0 or Cave.map[e[2]][e[1]+1] == 3) do
+        while e[1] + 1 <= #Cave.map[1] and (Cave.map[e[2]][e[1]+1].tiletype == 0 or Cave.map[e[2]][e[1]+1].tiletype == 3) do
           e = { e[1]+1, e[2] }
         end
         for m = w[1],e[1] do
-          if Cave.map[w[2]][m] == 0 then
-            Cave.map[w[2]][m] = 2
+          if Cave.map[w[2]][m].tiletype == 0 then
+            Cave.map[w[2]][m].tiletype = 2
           else 
-            Cave.map[w[2]][m] = 4
+            Cave.map[w[2]][m].tiletype = 4
           end
           table.insert(connectedList, {m, w[2]})
-          if w[2]-1 > 0 and Cave.map[w[2]-1][m] == 0 then
+          if w[2]-1 > 0 and Cave.map[w[2]-1][m].tiletype == 0 then
             table.insert( queue, {m, w[2]-1} )
             added = added + 1
           end
-          if w[2]+1 <= #Cave.map and Cave.map[w[2]+1][m] == 0 then
+          if w[2]+1 <= #Cave.map and Cave.map[w[2]+1][m].tiletype == 0 then
             table.insert( queue, {m, w[2]+1} )
             added = added + 1
           end
@@ -88,7 +88,7 @@ function connect()
   
   for a=1,Cave.mapheight do
     for b=1,Cave.mapwidth do
-      if Cave.map[a][b]==0 then
+      if Cave.map[a][b].tiletype == 0 then
         unconnected = true
         local nodePoint = { b, a }
         table.insert(unconnectedList, nodePoint)
@@ -116,21 +116,21 @@ function connect()
 
   if close1[1] <= close2[1] then
     for u = close1[1],close2[1] do
-      Cave.map[close1[2]][u] = 3
+      Cave.map[close1[2]][u].tiletype = 3
     end
   else
     for u = close2[1],close1[1] do
-      Cave.map[close1[2]][u] = 3
+      Cave.map[close1[2]][u].tiletype = 3
     end
   end
 
   if close1[2] <= close2[2] then
     for u = close1[2],close2[2] do
-      Cave.map[u][close2[1]] = 3
+      Cave.map[u][close2[1]].tiletype = 3
     end
   else
     for u = close2[2],close1[2] do
-      Cave.map[u][close2[1]] = 3
+      Cave.map[u][close2[1]].tiletype = 3
     end
   end
 
