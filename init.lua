@@ -1,6 +1,6 @@
 function initialise(x,y)
   --this is the percentage chance of a cell being "alive" at first, can be tweaked but I find this to be ideal
-  local chance = 41
+  local chance = 46
   --until you get to your desired size, this adds a row, then the second for loop adds the correct amount of columns to your row, then onto the next row until map height is reached
   for a=1,y do
     table.insert(Cave.map,{})

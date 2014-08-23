@@ -30,11 +30,11 @@ function love.load()
       if Cave.map[a][b]==1 then
         io.write("X")
       elseif Cave.map[a][b]==2 then
-        io.write("0")
+        io.write(" ")
       elseif Cave.map[a][b]==3 then
-        io.write("S")
+        io.write(".")
       elseif Cave.map[a][b]==4 then
-        io.write("S")
+        io.write(".")
       else
         io.write(" ")
       end
