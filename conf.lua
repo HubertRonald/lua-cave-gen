@@ -30,6 +30,7 @@ function love.conf(t)
 	require 'torch'
 	require 'player'
 	require 'keyboard'
+	require 'collision'
 
 
   --default values

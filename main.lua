@@ -17,7 +17,25 @@ function love.load()
 	Cave.player.images = {}
 	Cave.player.images[1] = love.graphics.newImage('assets/bunny-still1.png')
 	Cave.player.images[2] = love.graphics.newImage('assets/bunny-still2.png')
+	Cave.player.images[3] = love.graphics.newImage('assets/bunny-jump1.png')
+	Cave.player.images[4] = love.graphics.newImage('assets/bunny-jump2.png')
+	Cave.player.images[5] = love.graphics.newImage('assets/bunny-jump3.png')
+	Cave.player.images[6] = love.graphics.newImage('assets/bunny-jump4.png')
+	Cave.player.images[7] = love.graphics.newImage('assets/bunny-jump5.png')
+	Cave.player.images[8] = love.graphics.newImage('assets/bunny-jump6.png')
+	Cave.player.images[9] = love.graphics.newImage('assets/bunny-jump7.png')
+	Cave.player.images[10] = love.graphics.newImage('assets/bunny-jump8.png')
+	Cave.player.images[11] = love.graphics.newImage('assets/bunny-jump9.png')
+	Cave.player.images[12] = love.graphics.newImage('assets/bunny-fall1.png')
 	Cave.player.image = 1
+	Cave.player.hopping = false
+	Cave.player.direction = 'left'
+	Cave.player.jumpstarty = Cave.player.y
+	Cave.player.falling = false
+	Cave.player.velocity = 0
+	Cave.player.fallcount = 0
+	Cave.player.shudder = -0.05
+	Cave.player.jumping = false
 
 	--list of torches for quick access
 	Cave.torches = {}

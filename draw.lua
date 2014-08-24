@@ -43,7 +43,13 @@ function love.draw()
 				end
 			end
 		end
-		love.graphics.draw(Cave.player.images[Cave.player.image],(Cave.player.x-1) * Cave.tilewidth,(Cave.player.y-1) * Cave.tileheight)
+		local dir = 1
+		if Cave.player.direction == 'right' then
+			dir = -1
+		else
+			dir = 1
+		end
+		love.graphics.draw(Cave.player.images[Cave.player.image],((Cave.player.x-1) * Cave.tilewidth) + (Cave.player.images[Cave.player.image]:getWidth() /2),((Cave.player.y-1) * Cave.tileheight) + (Cave.player.images[Cave.player.image]:getHeight() /2), 0, dir, 1, Cave.player.images[Cave.player.image]:getWidth() / 2, Cave.player.images[Cave.player.image]:getHeight() / 2)
 		love.graphics.pop()
 	end
 end
