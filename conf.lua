@@ -18,12 +18,18 @@ function love.conf(t)
   Cave.mapheight=45
   Cave.mapwidth=100
 
+	Cave.windowwidth = 800
+	Cave.windowheight = 640
+
   --all files list here (try keep them in order)
   require 'init'
   require 'flood'
 	require 'draw'
 	require 'update'
 	require 'shadow'
+	require 'torch'
+	require 'player'
+	require 'keyboard'
 
 
   --default values
